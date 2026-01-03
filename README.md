@@ -920,7 +920,7 @@ Planned features for future releases:
 
 **Made with 💜 by [Shiraz Kanga](https://github.com/skanga)**
 
-Based on [MD2HTML](https://github.com/ZigaoWang/md2html/) by [Zigao Wang](https://github.com/ZigaoWang)
+Based on [MD2HTML](https://github.com/ZigaoWang/md2html/) by [Zigao Wang](https://github.com/ZigaoWang). Review [CHANGES.md](CHANGES.md) to see all the updates
 
 ⭐ Star this repo if you find it useful!
 
