@@ -2,7 +2,7 @@
 
 > Transform your Markdown files into beautiful, responsive HTML documents with a single command.
 
-[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: Cross-platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](https://github.com/skanga/md2html)
 
@@ -59,7 +59,7 @@
 
 ### Prerequisites
 
-- Python 3.7 or higher
+- Python 3.10 or higher
 - pip (Python package installer)
 
 ### Install Dependencies
