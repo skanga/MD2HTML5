@@ -1,0 +1,12 @@
+# MD2HTML5 - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Markdown parsing and conversion
+markdown>=3.3.0
+
+# HTML parsing and manipulation
+beautifulsoup4>=4.9.0
+lxml>=4.6.0
+
+# Syntax highlighting for code blocks
+pygments>=2.7.0

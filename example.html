@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="MD2HTML">
+    <title>Converted Markdown</title>
+    <style>
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #F00 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666 } /* Operator */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.highlight .gr { color: #E40000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #04D } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #687822 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #00F; font-weight: bold } /* Name.Class */
+.highlight .no { color: #800 } /* Name.Constant */
+.highlight .nd { color: #A2F } /* Name.Decorator */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #00F } /* Name.Function */
+.highlight .nl { color: #767600 } /* Name.Label */
+.highlight .nn { color: #00F; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #A2F; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #BBB } /* Text.Whitespace */
+.highlight .mb { color: #666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666 } /* Literal.Number.Float */
+.highlight .mh { color: #666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #00F } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666 } /* Literal.Number.Integer.Long */
+
+/* Dark mode syntax highlighting */
+[data-theme="dark"] pre { line-height: 125%; }
+[data-theme="dark"] td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+[data-theme="dark"] span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+[data-theme="dark"] td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+[data-theme="dark"] span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+[data-theme="dark"] .highlight .hll { background-color: #49483e }
+[data-theme="dark"] .highlight { background: #272822; color: #F8F8F2 }
+[data-theme="dark"] .highlight .c { color: #959077 } /* Comment */
+[data-theme="dark"] .highlight .err { color: #ED007E; background-color: #1E0010 } /* Error */
+[data-theme="dark"] .highlight .esc { color: #F8F8F2 } /* Escape */
+[data-theme="dark"] .highlight .g { color: #F8F8F2 } /* Generic */
+[data-theme="dark"] .highlight .k { color: #66D9EF } /* Keyword */
+[data-theme="dark"] .highlight .l { color: #AE81FF } /* Literal */
+[data-theme="dark"] .highlight .n { color: #F8F8F2 } /* Name */
+[data-theme="dark"] .highlight .o { color: #FF4689 } /* Operator */
+[data-theme="dark"] .highlight .x { color: #F8F8F2 } /* Other */
+[data-theme="dark"] .highlight .p { color: #F8F8F2 } /* Punctuation */
+[data-theme="dark"] .highlight .ch { color: #959077 } /* Comment.Hashbang */
+[data-theme="dark"] .highlight .cm { color: #959077 } /* Comment.Multiline */
+[data-theme="dark"] .highlight .cp { color: #959077 } /* Comment.Preproc */
+[data-theme="dark"] .highlight .cpf { color: #959077 } /* Comment.PreprocFile */
+[data-theme="dark"] .highlight .c1 { color: #959077 } /* Comment.Single */
+[data-theme="dark"] .highlight .cs { color: #959077 } /* Comment.Special */
+[data-theme="dark"] .highlight .gd { color: #FF4689 } /* Generic.Deleted */
+[data-theme="dark"] .highlight .ge { color: #F8F8F2; font-style: italic } /* Generic.Emph */
+[data-theme="dark"] .highlight .ges { color: #F8F8F2; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+[data-theme="dark"] .highlight .gr { color: #F8F8F2 } /* Generic.Error */
+[data-theme="dark"] .highlight .gh { color: #F8F8F2 } /* Generic.Heading */
+[data-theme="dark"] .highlight .gi { color: #A6E22E } /* Generic.Inserted */
+[data-theme="dark"] .highlight .go { color: #66D9EF } /* Generic.Output */
+[data-theme="dark"] .highlight .gp { color: #FF4689; font-weight: bold } /* Generic.Prompt */
+[data-theme="dark"] .highlight .gs { color: #F8F8F2; font-weight: bold } /* Generic.Strong */
+[data-theme="dark"] .highlight .gu { color: #959077 } /* Generic.Subheading */
+[data-theme="dark"] .highlight .gt { color: #F8F8F2 } /* Generic.Traceback */
+[data-theme="dark"] .highlight .kc { color: #66D9EF } /* Keyword.Constant */
+[data-theme="dark"] .highlight .kd { color: #66D9EF } /* Keyword.Declaration */
+[data-theme="dark"] .highlight .kn { color: #FF4689 } /* Keyword.Namespace */
+[data-theme="dark"] .highlight .kp { color: #66D9EF } /* Keyword.Pseudo */
+[data-theme="dark"] .highlight .kr { color: #66D9EF } /* Keyword.Reserved */
+[data-theme="dark"] .highlight .kt { color: #66D9EF } /* Keyword.Type */
+[data-theme="dark"] .highlight .ld { color: #E6DB74 } /* Literal.Date */
+[data-theme="dark"] .highlight .m { color: #AE81FF } /* Literal.Number */
+[data-theme="dark"] .highlight .s { color: #E6DB74 } /* Literal.String */
+[data-theme="dark"] .highlight .na { color: #A6E22E } /* Name.Attribute */
+[data-theme="dark"] .highlight .nb { color: #F8F8F2 } /* Name.Builtin */
+[data-theme="dark"] .highlight .nc { color: #A6E22E } /* Name.Class */
+[data-theme="dark"] .highlight .no { color: #66D9EF } /* Name.Constant */
+[data-theme="dark"] .highlight .nd { color: #A6E22E } /* Name.Decorator */
+[data-theme="dark"] .highlight .ni { color: #F8F8F2 } /* Name.Entity */
+[data-theme="dark"] .highlight .ne { color: #A6E22E } /* Name.Exception */
+[data-theme="dark"] .highlight .nf { color: #A6E22E } /* Name.Function */
+[data-theme="dark"] .highlight .nl { color: #F8F8F2 } /* Name.Label */
+[data-theme="dark"] .highlight .nn { color: #F8F8F2 } /* Name.Namespace */
+[data-theme="dark"] .highlight .nx { color: #A6E22E } /* Name.Other */
+[data-theme="dark"] .highlight .py { color: #F8F8F2 } /* Name.Property */
+[data-theme="dark"] .highlight .nt { color: #FF4689 } /* Name.Tag */
+[data-theme="dark"] .highlight .nv { color: #F8F8F2 } /* Name.Variable */
+[data-theme="dark"] .highlight .ow { color: #FF4689 } /* Operator.Word */
+[data-theme="dark"] .highlight .pm { color: #F8F8F2 } /* Punctuation.Marker */
+[data-theme="dark"] .highlight .w { color: #F8F8F2 } /* Text.Whitespace */
+[data-theme="dark"] .highlight .mb { color: #AE81FF } /* Literal.Number.Bin */
+[data-theme="dark"] .highlight .mf { color: #AE81FF } /* Literal.Number.Float */
+[data-theme="dark"] .highlight .mh { color: #AE81FF } /* Literal.Number.Hex */
+[data-theme="dark"] .highlight .mi { color: #AE81FF } /* Literal.Number.Integer */
+[data-theme="dark"] .highlight .mo { color: #AE81FF } /* Literal.Number.Oct */
+[data-theme="dark"] .highlight .sa { color: #E6DB74 } /* Literal.String.Affix */
+[data-theme="dark"] .highlight .sb { color: #E6DB74 } /* Literal.String.Backtick */
+[data-theme="dark"] .highlight .sc { color: #E6DB74 } /* Literal.String.Char */
+[data-theme="dark"] .highlight .dl { color: #E6DB74 } /* Literal.String.Delimiter */
+[data-theme="dark"] .highlight .sd { color: #E6DB74 } /* Literal.String.Doc */
+[data-theme="dark"] .highlight .s2 { color: #E6DB74 } /* Literal.String.Double */
+[data-theme="dark"] .highlight .se { color: #AE81FF } /* Literal.String.Escape */
+[data-theme="dark"] .highlight .sh { color: #E6DB74 } /* Literal.String.Heredoc */
+[data-theme="dark"] .highlight .si { color: #E6DB74 } /* Literal.String.Interpol */
+[data-theme="dark"] .highlight .sx { color: #E6DB74 } /* Literal.String.Other */
+[data-theme="dark"] .highlight .sr { color: #E6DB74 } /* Literal.String.Regex */
+[data-theme="dark"] .highlight .s1 { color: #E6DB74 } /* Literal.String.Single */
+[data-theme="dark"] .highlight .ss { color: #E6DB74 } /* Literal.String.Symbol */
+[data-theme="dark"] .highlight .bp { color: #F8F8F2 } /* Name.Builtin.Pseudo */
+[data-theme="dark"] .highlight .fm { color: #A6E22E } /* Name.Function.Magic */
+[data-theme="dark"] .highlight .vc { color: #F8F8F2 } /* Name.Variable.Class */
+[data-theme="dark"] .highlight .vg { color: #F8F8F2 } /* Name.Variable.Global */
+[data-theme="dark"] .highlight .vi { color: #F8F8F2 } /* Name.Variable.Instance */
+[data-theme="dark"] .highlight .vm { color: #F8F8F2 } /* Name.Variable.Magic */
+[data-theme="dark"] .highlight .il { color: #AE81FF } /* Literal.Number.Integer.Long */
+
+/* CSS Variables for theming */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9f9f9;
+    --bg-tertiary: #f4f4f4;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-tertiary: #777777;
+    --border-color: #eaeaea;
+    --border-accent: #007aff;
+    --link-color: #007aff;
+    --code-bg: #f4f4f4;
+    --code-text: #333333;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.2s;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #222222;
+    --bg-tertiary: #2d2d2d;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-tertiary: #888888;
+    --border-color: #404040;
+    --border-accent: #4a9eff;
+    --link-color: #4a9eff;
+    --code-bg: #2d2d2d;
+    --code-text: #e0e0e0;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Auto dark mode based on system preference */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #222222;
+        --bg-tertiary: #2d2d2d;
+        --text-primary: #e0e0e0;
+        --text-secondary: #b0b0b0;
+        --text-tertiary: #888888;
+        --border-color: #404040;
+        --border-accent: #4a9eff;
+        --link-color: #4a9eff;
+        --code-bg: #2d2d2d;
+        --code-text: #e0e0e0;
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 40px 20px;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography - Headings with improved spacing */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+/* Heading anchor links */
+h1:hover .heading-anchor,
+h2:hover .heading-anchor,
+h3:hover .heading-anchor,
+h4:hover .heading-anchor,
+h5:hover .heading-anchor,
+h6:hover .heading-anchor {
+    opacity: 1;
+}
+
+.heading-anchor {
+    opacity: 0;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: opacity var(--transition-speed);
+}
+
+.heading-anchor:hover {
+    color: var(--link-color);
+}
+
+/* Paragraph spacing */
+p {
+    margin: 1em 0;
+}
+
+/* Enhanced code blocks */
+pre {
+    background: var(--code-bg);
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    position: relative;
+    color: var(--code-text);
+    margin: 1.5em 0;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+}
+
+pre:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+/* Inline code */
+code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.9em;
+    color: var(--code-text);
+    border: 1px solid var(--border-color);
+}
+
+/* Code blocks - remove inline code styling when inside pre */
+pre code {
+    background: none;
+    padding: 0;
+    border: none;
+    font-size: 0.875em;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color var(--transition-speed), text-decoration var(--transition-speed);
+    border-bottom: 1px solid transparent;
+}
+
+a:hover {
+    border-bottom-color: var(--link-color);
+}
+
+a:focus {
+    outline: 2px solid var(--link-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* External links indicator */
+a[href^="http"]:not([href*="localhost"])::after {
+    content: "↗";
+    font-size: 0.8em;
+    margin-left: 0.2em;
+    opacity: 0.6;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 2em;
+    margin: 1em 0;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--border-accent);
+    padding: 1em 1.5em;
+    margin: 1.5em 0;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-radius: 0 4px 4px 0;
+    font-style: italic;
+}
+
+blockquote p:first-child {
+    margin-top: 0;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Copy button improvements */
+.copy-button {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: all var(--transition-speed);
+    position: relative;
+    color: var(--text-primary);
+}
+
+.copy-button:hover {
+    background: var(--border-accent);
+    border-color: var(--border-accent);
+    transform: scale(1.05);
+}
+
+.copy-button:hover::after {
+    content: "Copy code";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-right: 8px;
+    pointer-events: none;
+}
+
+.copy-button:focus {
+    outline: 2px solid var(--border-accent);
+    outline-offset: 2px;
+}
+
+.copy-button svg {
+    display: block;
+    fill: currentColor;
+}
+
+/* Code header */
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-tertiary);
+    padding: 8px 12px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+}
+
+.code-header + pre {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.language-label {
+    font-weight: 600;
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Images */
+img {
+    display: block;
+    margin: 2em auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+img[loading="lazy"] {
+    background: var(--bg-secondary);
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-top: 0.5em;
+}
+
+/* Syntax highlighting adjustments */
+code[class*="language-"], pre[class*="language-"] {
+    color: var(--code-text);
+    background: none;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.875em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.6;
+    tab-size: 4;
+    hyphens: none;
+}
+
+/* Enhanced tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+    box-shadow: var(--shadow-sm);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 12px 16px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--bg-tertiary);
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+tbody tr {
+    transition: background-color var(--transition-speed);
+}
+
+tbody tr:hover {
+    background-color: var(--bg-tertiary);
+}
+
+/* Responsive tables on mobile */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* ============================================
+   MOBILE RESPONSIVENESS
+   ============================================ */
+
+/* Mobile: Reduce body padding */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 16px;
+        max-width: 100%;
+    }
+
+    /* Responsive typography - smaller on mobile */
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.35em;
+    }
+
+    h4 {
+        font-size: 1.15em;
+    }
+
+    /* Reduce heading margins on mobile */
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5em;
+    }
+
+    /* Better code block handling */
+    pre {
+        padding: 12px;
+        font-size: 0.85em;
+        margin: 1em -16px; /* Bleed to edges */
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    .code-header {
+        margin: 1em -16px 0; /* Align with pre */
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        padding: 6px 16px;
+    }
+
+    /* Inline code adjustments */
+    code {
+        font-size: 0.85em;
+        word-break: break-word;
+    }
+
+    /* Images - full width on mobile */
+    img {
+        margin: 1.5em -16px;
+        border-radius: 0;
+        max-width: calc(100% + 32px);
+        width: calc(100% + 32px);
+    }
+
+    /* Blockquotes */
+    blockquote {
+        margin: 1em -8px;
+        padding: 1em 1em;
+        font-size: 0.95em;
+    }
+
+    /* Lists - less padding */
+    ul, ol {
+        padding-left: 1.5em;
+    }
+
+    /* Tables on mobile already handled above */
+}
+
+/* Small mobile devices (phones in portrait) */
+@media (max-width: 480px) {
+    body {
+        padding: 16px 12px;
+        font-size: 16px; /* Prevent iOS zoom on inputs */
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 1.75em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    /* Even smaller code on tiny screens */
+    pre {
+        font-size: 0.8em;
+        padding: 10px;
+        margin: 1em -12px;
+    }
+
+    .code-header {
+        margin: 1em -12px 0;
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    /* Adjust copy button size */
+    .copy-button {
+        padding: 6px 10px;
+    }
+
+    .copy-button svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Hide copy button tooltip on small screens */
+    .copy-button:hover::after {
+        display: none;
+    }
+
+    /* Images */
+    img {
+        margin: 1em -12px;
+        max-width: calc(100% + 24px);
+        width: calc(100% + 24px);
+    }
+
+    /* Blockquotes */
+    blockquote {
+        margin: 1em -6px;
+        padding: 0.75em 1em;
+    }
+}
+
+/* Touch-friendly interactive elements */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .copy-button {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 8px 12px;
+    }
+
+    a {
+        padding: 2px 0;
+    }
+
+    .heading-anchor {
+        padding: 4px;
+    }
+
+    /* Remove hover effects on touch devices */
+    pre:hover {
+        transform: none;
+    }
+
+    img:hover {
+        transform: none;
+    }
+
+    /* Make external link indicator always visible on mobile */
+    a[href^="http"]:not([href*="localhost"])::after {
+        opacity: 1;
+    }
+}
+
+/* Dark mode toggle button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-speed);
+    z-index: 1000;
+    color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(20deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--border-accent);
+    outline-offset: 2px;
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Hide sun icon in light mode, moon in dark mode */
+[data-theme="dark"] .theme-toggle .sun-icon,
+:root:not([data-theme="dark"]) .theme-toggle .moon-icon {
+    display: none;
+}
+
+/* Mobile adjustments for theme toggle */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .theme-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-toggle {
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Disable rotation animation on very small screens */
+    .theme-toggle:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    border-top: 2px solid var(--border-color);
+    margin: 3em 0;
+}
+
+/* Selection color */
+::selection {
+    background-color: var(--border-accent);
+    color: var(--bg-primary);
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+    outline: 2px solid var(--border-accent);
+    outline-offset: 2px;
+}
+
+/* Skip to content link for accessibility */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--border-accent);
+    color: var(--bg-primary);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    z-index: 100;
+    transition: top var(--transition-speed);
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+        max-width: 100%;
+        padding: 20px;
+        font-size: 12pt;
+    }
+
+    .theme-toggle {
+        display: none;
+    }
+
+    .copy-button {
+        display: none;
+    }
+
+    .heading-anchor {
+        display: none;
+    }
+
+    .skip-to-content {
+        display: none;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        word-wrap: break-word;
+    }
+
+    pre, blockquote {
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+        background: #f9f9f9;
+        padding: 10px;
+    }
+
+    .code-header {
+        background: #e9e9e9;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+        box-shadow: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        page-break-inside: avoid;
+    }
+
+    th, td {
+        border: 1px solid #333;
+    }
+
+    /* Remove shadows and transitions for print */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+        transition: none !important;
+    }
+}
+
+    </style>
+    <script>
+        // Copy code functionality
+        function copyCode(button) {
+            const header = button.closest('.code-header');
+            let pre = header ? header.nextElementSibling : null;
+            if (!pre || pre.tagName !== 'PRE') {
+                pre = header ? header.parentElement.querySelector('pre') : null;
+            }
+            const code = pre ? pre.innerText : '';
+            navigator.clipboard.writeText(code).then(() => {
+                button.innerHTML = '<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check"><path fill-rule="evenodd" d="M13.78 3.22a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 0 1 1.06-1.06L6 10.44l7.22-7.22a.75.75 0 0 1 1.06 0z"></path></svg>';
+                setTimeout(() => {
+                    button.innerHTML = '<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>';
+                }, 2000);
+            });
+        }
+
+        // Dark mode toggle functionality
+        function toggleTheme() {
+            const root = document.documentElement;
+            const currentTheme = root.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Initialize theme from localStorage or system preference
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        // Add heading anchor links
+        function addHeadingAnchors() {
+            const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+            const usedIds = new Map();
+            headings.forEach(heading => {
+                let baseId = heading.id;
+                if (!baseId) {
+                    baseId = heading.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+                }
+                if (!baseId) {
+                    baseId = 'heading';
+                }
+                const count = usedIds.get(baseId) || 0;
+                usedIds.set(baseId, count + 1);
+                const uniqueId = count === 0 ? baseId : baseId + '-' + count;
+                heading.id = uniqueId;
+                const anchor = document.createElement('a');
+                anchor.className = 'heading-anchor';
+                anchor.href = '#' + heading.id;
+                anchor.innerHTML = '#';
+                anchor.setAttribute('aria-label', 'Link to this heading');
+                heading.appendChild(anchor);
+            });
+        }
+
+        // Conditionally load MathJax if math content detected
+        function loadMathJaxIfNeeded() {
+            const hasMath = document.body.innerHTML.match(/\$\$|\\\[|\\\(/);
+            if (hasMath) {
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+                script.async = true;
+                document.head.appendChild(script);
+            }
+        }
+
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            addHeadingAnchors();
+            loadMathJaxIfNeeded();
+        });
+    </script>
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    <!-- Dark mode toggle button -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.977 6.977 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/>
+        </svg>
+    </button>
+
+    <!-- Main content wrapper -->
+    <main id="main-content">
+<h1 id="md2html5-feature-showcase">MD2HTML5 Feature Showcase</h1>
+<p>Welcome to the <strong>MD2HTML5</strong> example document! This file demonstrates all the features of the markdown to HTML converter.</p>
+<div class="toc">
+<ul>
+<li><a href="#md2html5-feature-showcase">MD2HTML5 Feature Showcase</a><ul>
+<li><a href="#typography-examples">Typography Examples</a><ul>
+<li><a href="#headings">Headings</a><ul>
+<li><a href="#this-is-h4">This is H4</a><ul>
+<li><a href="#this-is-h5">This is H5</a><ul>
+<li><a href="#this-is-h6">This is H6</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#text-formatting">Text Formatting</a></li>
+</ul>
+</li>
+<li><a href="#lists">Lists</a><ul>
+<li><a href="#unordered-list">Unordered List</a></li>
+<li><a href="#ordered-list">Ordered List</a></li>
+<li><a href="#task-list">Task List</a></li>
+</ul>
+</li>
+<li><a href="#code-examples">Code Examples</a><ul>
+<li><a href="#inline-code">Inline Code</a></li>
+<li><a href="#python-code-block">Python Code Block</a></li>
+<li><a href="#javascript-code-block">JavaScript Code Block</a></li>
+<li><a href="#bashshell-code-block">Bash/Shell Code Block</a></li>
+<li><a href="#sql-code-block">SQL Code Block</a></li>
+</ul>
+</li>
+<li><a href="#links">Links</a><ul>
+<li><a href="#internal-links">Internal Links</a></li>
+<li><a href="#external-links">External Links</a></li>
+</ul>
+</li>
+<li><a href="#images">Images</a></li>
+<li><a href="#blockquotes">Blockquotes</a></li>
+<li><a href="#tables">Tables</a><ul>
+<li><a href="#simple-table">Simple Table</a></li>
+<li><a href="#aligned-table">Aligned Table</a></li>
+</ul>
+</li>
+<li><a href="#mathematical-notation">Mathematical Notation</a><ul>
+<li><a href="#inline-math">Inline Math</a></li>
+<li><a href="#block-math">Block Math</a></li>
+</ul>
+</li>
+<li><a href="#horizontal-rules">Horizontal Rules</a></li>
+<li><a href="#footnotes">Footnotes</a></li>
+<li><a href="#html-elements">HTML Elements</a></li>
+<li><a href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+<li><a href="#emojis">Emojis</a></li>
+<li><a href="#special-features">Special Features</a><ul>
+<li><a href="#accessibility">Accessibility</a></li>
+<li><a href="#responsive-design">Responsive Design</a></li>
+<li><a href="#dark-mode">Dark Mode</a></li>
+<li><a href="#copy-code-buttons">Copy Code Buttons</a></li>
+</ul>
+</li>
+<li><a href="#tips-and-tricks">Tips and Tricks</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="typography-examples">Typography Examples</h2>
+<h3 id="headings">Headings</h3>
+<p>You can see headings from H1 to H6. Hover over any heading to see the <strong>anchor link</strong> appear!</p>
+<h4 id="this-is-h4">This is H4</h4>
+<h5 id="this-is-h5">This is H5</h5>
+<h6 id="this-is-h6">This is H6</h6>
+<h3 id="text-formatting">Text Formatting</h3>
+<p>This paragraph contains <strong>bold text</strong>, <em>italic text</em>, <strong><em>bold and italic</em></strong>, ~~strikethrough~~, and <code>inline code</code>.</p>
+<p>You can also use <mark>highlighted text</mark> with HTML.</p>
+<h2 id="lists">Lists</h2>
+<h3 id="unordered-list">Unordered List</h3>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Nested item 1</li>
+<li>Nested item 2<ul>
+<li>Deeply nested item</li>
+</ul>
+</li>
+<li>Third item</li>
+</ul>
+<h3 id="ordered-list">Ordered List</h3>
+<ol>
+<li>First step</li>
+<li>Second step</li>
+<li>Sub-step A</li>
+<li>Sub-step B</li>
+<li>Third step</li>
+</ol>
+<h3 id="task-list">Task List</h3>
+<ul>
+<li>[x] Completed task</li>
+<li>[x] Another completed task</li>
+<li>[ ] Pending task</li>
+<li>[ ] Another pending task</li>
+</ul>
+<h2 id="code-examples">Code Examples</h2>
+<h3 id="inline-code">Inline Code</h3>
+<p>Use the <code>print()</code> function in Python or <code>console.log()</code> in JavaScript.</p>
+<h3 id="python-code-block">Python Code Block</h3>
+<div class="code-header">
+<span class="language-label">python</span>
+<button class="copy-button" onclick="copyCode(this)">
+<svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+</button>
+</div>
+<pre class="highlight"><code class="language-python"><span class="k">def</span><span class="w"> </span><span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Generate Fibonacci sequence up to n terms."""</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">a</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="c1"># Generate first 10 Fibonacci numbers</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">' '</span><span class="p">)</span>
+</code></pre>
+<h3 id="javascript-code-block">JavaScript Code Block</h3>
+<div class="code-header">
+<span class="language-label">javascript</span>
+<button class="copy-button" onclick="copyCode(this)">
+<svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+</button>
+</div>
+<pre class="highlight"><code class="language-javascript"><span class="c1">// Async/await example</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">fetchData</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Error fetching data:'</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="nx">error</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Usage</span>
+<span class="nx">fetchData</span><span class="p">(</span><span class="s1">'https://api.example.com/data'</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+</code></pre>
+<h3 id="bashshell-code-block">Bash/Shell Code Block</h3>
+<div class="code-header">
+<span class="language-label">bash</span>
+<button class="copy-button" onclick="copyCode(this)">
+<svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+</button>
+</div>
+<pre class="highlight"><code class="language-bash"><span class="ch">#!/bin/bash</span>
+<span class="c1"># Deploy script example</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Starting deployment..."</span>
+
+<span class="c1"># Build the project</span>
+npm<span class="w"> </span>run<span class="w"> </span>build
+
+<span class="c1"># Run tests</span>
+npm<span class="w"> </span><span class="nb">test</span>
+
+<span class="c1"># Deploy to production</span>
+rsync<span class="w"> </span>-avz<span class="w"> </span>dist/<span class="w"> </span>user@server:/var/www/html/
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Deployment complete!"</span>
+</code></pre>
+<h3 id="sql-code-block">SQL Code Block</h3>
+<div class="code-header">
+<span class="language-label">sql</span>
+<button class="copy-button" onclick="copyCode(this)">
+<svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+</button>
+</div>
+<pre class="highlight"><code class="language-sql"><span class="c1">-- Create users table</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">username</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+<span class="p">);</span>
+
+<span class="c1">-- Insert sample data</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="w">    </span><span class="p">(</span><span class="s1">'alice'</span><span class="p">,</span><span class="w"> </span><span class="s1">'alice@example.com'</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="s1">'bob'</span><span class="p">,</span><span class="w"> </span><span class="s1">'bob@example.com'</span><span class="p">);</span>
+
+<span class="c1">-- Query with join</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">post_count</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="n">u</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">posts</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">user_id</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">username</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">post_count</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre>
+<h2 id="links">Links</h2>
+<h3 id="internal-links">Internal Links</h3>
+<ul>
+<li><a href="#typography-examples">Jump to Typography</a></li>
+<li><a href="#code-examples">Jump to Code Examples</a></li>
+<li><a href="#tables">Jump to Tables</a></li>
+</ul>
+<h3 id="external-links">External Links</h3>
+<ul>
+<li><a href="https://github.com">GitHub</a> - Notice the ↗ indicator for external links</li>
+<li><a href="https://docs.python.org">Python Documentation</a></li>
+<li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
+</ul>
+<h2 id="images">Images</h2>
+<p><img alt="Placeholder Image" loading="lazy" src="https://via.placeholder.com/800x400/007aff/ffffff?text=Example+Image"/></p>
+<p><em>Note: Images are lazy-loaded for better performance and have a hover zoom effect!</em></p>
+<h2 id="blockquotes">Blockquotes</h2>
+<blockquote>
+<p>"The best way to predict the future is to invent it."
+— Alan Kay</p>
+<p>This is a multi-paragraph blockquote.</p>
+<p>It can contain <strong>formatted text</strong> and even <code>code snippets</code>.</p>
+<p>Very useful for highlighting important information!</p>
+</blockquote>
+<h2 id="tables">Tables</h2>
+<h3 id="simple-table">Simple Table</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dark Mode</td>
+<td>✅</td>
+<td>Toggle in top-right</td>
+</tr>
+<tr>
+<td>Responsive</td>
+<td>✅</td>
+<td>Mobile optimized</td>
+</tr>
+<tr>
+<td>Syntax Highlighting</td>
+<td>✅</td>
+<td>500+ languages</td>
+</tr>
+<tr>
+<td>Copy Buttons</td>
+<td>✅</td>
+<td>One-click copy</td>
+</tr>
+<tr>
+<td>Math Support</td>
+<td>✅</td>
+<td>LaTeX via MathJax</td>
+</tr>
+<tr>
+<td>Print Stylesheet</td>
+<td>✅</td>
+<td>Clean print output</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aligned-table">Aligned Table</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Left Aligned</th>
+<th style="text-align: center;">Center Aligned</th>
+<th style="text-align: right;">Right Aligned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Apple</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">$1.50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Banana</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: right;">$2.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">Orange</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: right;">$3.50</td>
+</tr>
+</tbody>
+</table>
+<p><em>Tables have zebra striping and hover effects!</em></p>
+<h2 id="mathematical-notation">Mathematical Notation</h2>
+<h3 id="inline-math">Inline Math</h3>
+<p>The Pythagorean theorem is $a^2 + b^2 = c^2$, and Einstein's famous equation is $E = mc^2$.</p>
+<h3 id="block-math">Block Math</h3>
+<p>The quadratic formula:</p>
+<p>$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$</p>
+<p>The Gaussian integral:</p>
+<p>$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$</p>
+<p>Matrix notation:</p>
+<p>$$
+\begin{bmatrix}
+a &amp; b \
+c &amp; d
+\end{bmatrix}
+\begin{bmatrix}
+x \
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+ax + by \
+cx + dy
+\end{bmatrix}
+$$</p>
+<h2 id="horizontal-rules">Horizontal Rules</h2>
+<p>You can separate sections with horizontal rules:</p>
+<hr/>
+<p>Like that one above!</p>
+<hr/>
+<h2 id="footnotes">Footnotes</h2>
+<p>Here's a sentence with a footnote<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. And here's another one<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+<p>You can also use named footnotes<sup id="fnref:note"><a class="footnote-ref" href="#fn:note">3</a></sup> for better organization.</p>
+<h2 id="html-elements">HTML Elements</h2>
+<p>You can embed HTML directly:</p>
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+<h3 style="margin-top: 0;">Custom HTML Block</h3>
+<p>This is a custom-styled div with gradient background. You can mix HTML and <strong>Markdown</strong> freely!</p>
+</div>
+<details>
+<summary>Click to expand collapsible section</summary>
+<p>This content is hidden by default. You can put any markdown here:</p>
+<ul>
+<li>Lists</li>
+<li><strong>Formatted text</strong></li>
+<li><code>Code snippets</code></li>
+</ul>
+<div class="code-header">
+<span class="language-label">python</span>
+<button class="copy-button" onclick="copyCode(this)">
+<svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+</button>
+</div>
+<pre class="highlight"><code class="language-python"><span class="nb">print</span><span class="p">(</span><span class="s2">"Even code blocks!"</span><span class="p">)</span>
+</code></pre>
+</details>
+<h2 id="keyboard-shortcuts">Keyboard Shortcuts</h2>
+<p>Use HTML <code>&lt;kbd&gt;</code> tags for keyboard shortcuts:</p>
+<ul>
+<li>Save: <kbd>Ctrl</kbd> + <kbd>S</kbd> (Windows/Linux) or <kbd>Cmd</kbd> + <kbd>S</kbd> (Mac)</li>
+<li>Copy: <kbd>Ctrl</kbd> + <kbd>C</kbd></li>
+<li>Paste: <kbd>Ctrl</kbd> + <kbd>V</kbd></li>
+<li>Toggle Dark Mode: Click the 🌙/☀️ button in top-right</li>
+</ul>
+<h2 id="emojis">Emojis</h2>
+<p>MD2HTML5 supports emojis: 🎉 🚀 💻 📱 ✨ ⚡ 🔥 💡 📝 ✅ ❌ ⚠️ 📊 🎨 🔧</p>
+<h2 id="special-features">Special Features</h2>
+<h3 id="accessibility">Accessibility</h3>
+<ul>
+<li>♿ <strong>Keyboard Navigation</strong>: Tab through interactive elements</li>
+<li>👀 <strong>Screen Reader Friendly</strong>: Semantic HTML with ARIA labels</li>
+<li>🎯 <strong>Focus Indicators</strong>: Clear focus states on all interactive elements</li>
+<li>⏭️ <strong>Skip to Content</strong>: Press Tab on page load to skip to main content</li>
+</ul>
+<h3 id="responsive-design">Responsive Design</h3>
+<ul>
+<li>💻 <strong>Desktop</strong>: Optimized for large screens (900px max-width)</li>
+<li>📱 <strong>Tablet</strong>: Adjusted layout for medium screens (≤768px)</li>
+<li>📲 <strong>Mobile</strong>: Full optimization for small screens (≤480px)</li>
+<li>👆 <strong>Touch-Friendly</strong>: 44px minimum touch targets on touch devices</li>
+</ul>
+<h3 id="dark-mode">Dark Mode</h3>
+<p>Try clicking the theme toggle button in the top-right corner!</p>
+<p>Features:
+- 🌙 Automatic system preference detection
+- 💾 Saves your preference to localStorage
+- 🎨 Smooth transitions between themes
+- 🔄 Keyboard accessible (Tab + Enter)</p>
+<h3 id="copy-code-buttons">Copy Code Buttons</h3>
+<p>Hover over any code block to see the copy button with tooltip. Click to copy the entire code block to your clipboard!</p>
+<h2 id="tips-and-tricks">Tips and Tricks</h2>
+<ol>
+<li><strong>Deep Linking</strong>: Share direct links to sections using heading anchors</li>
+<li><strong>Print Output</strong>: Press Ctrl+P / Cmd+P for a clean, print-optimized version</li>
+<li><strong>Custom Styling</strong>: Use the <code>-c</code> option to provide your own CSS</li>
+<li><strong>Batch Convert</strong>: Use shell scripts to convert multiple files at once</li>
+<li><strong>Math Mode</strong>: Only includes MathJax if your document contains math notation</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>This example demonstrates all the major features of MD2HTML5:</p>
+<p>✅ Beautiful typography and spacing
+✅ Syntax highlighting for code
+✅ Responsive tables with enhancements
+✅ Mathematical notation support
+✅ Dark mode with toggle
+✅ Accessibility features
+✅ Mobile-responsive design
+✅ Print-optimized output
+✅ Interactive elements (copy buttons, anchor links)
+✅ And much more!</p>
+<p>Try converting this file with:</p>
+<div class="code-header">
+<span class="language-label">bash</span>
+<button class="copy-button" onclick="copyCode(this)">
+<svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+</button>
+</div>
+<pre class="highlight"><code class="language-bash">python<span class="w"> </span>md2html.py<span class="w"> </span>-i<span class="w"> </span>example.md<span class="w"> </span>-o<span class="w"> </span>example.html
+</code></pre>
+<p>Then open <code>example.html</code> in your browser and explore all the features!</p>
+<hr/>
+<div align="center">
+<p><strong>Made with 💜 using MD2HTML5</strong></p>
+<p><a href="https://github.com/skanga/md2html">View on GitHub</a> | <a href="https://github.com/skanga/md2html/issues">Report Issue</a></p>
+</div>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>This is the first footnote. It will appear at the bottom of the document. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>This is the second footnote with <strong>formatted text</strong> and <a href="https://example.com">a link</a>. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:note">
+<p>Named footnotes are easier to manage in long documents. <a class="footnote-backref" href="#fnref:note" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+    </main>
+</body>
+</html>
